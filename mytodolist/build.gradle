@@ -20,20 +20,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.franzbecker.gradle-lombok'
 
-//create a single Jar with all dependencies
-jar {
-    baseName = "MyTodoList"    
-    manifest {
-        attributes 'Title': 'MyTodoList',
-                   'Version': 1.0,
-                   'Main-Class': 'com.hschoi.MyTodoListApplication'
-    }
-    from {
-        configurations.compile.collect {
-            it.isDirectory() ? it : zipTree(it)
-        }
-    }
-}
+
 
 group = 'com.hschoi'
 version = '0.0.1-SNAPSHOT'
