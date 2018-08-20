@@ -3,15 +3,15 @@ simple TodoList Management
 
 # MyTodoList 등록
 
- 		title				      id			    parents			    child
-------------------------------------------------------------
-		회사일				      1				      1				        1  	
+ 		title			     id			    parents			    child
+
+		회사일			    1                         1                              1  	
 		  |	
-		  |- 복사			     2             1               2
-		  |- 코딩			     3             1               3
+		  |- 복사			     2                         1                              2
+		  |- 코딩			     3                         1                              3
 		      |
-			    |- 디버깅	  4				      3				        4
-		집안일				      5				      2				        5
+		      |- 디버깅                 4                         3                              4
+		집안일                          5                         2                              5
 
 
 위와 같이 Todo에는 각각의 고유한 id를 가지고 할일에 대한 내용을 저장 할 수 있다.
@@ -28,5 +28,8 @@ Todo는 Have a 관계를 갖을 수 있다.
 # Todo 삭제
  - 파라미터로 받은 Todo id를 이용하여 자신이 달린 directory를 조회 후
  - directory 삭제 -> Todo list 삭제
- 
- 
+
+# Todo 완료
+ - Todo의 유니크한 id를 파라미터로 받아서 Todo 내용을 완료처리 한다.
+ - 파라미터로 받은 Todo id를 이용하여 자신이 달린 directory를 조회 후
+ - TodoEntity의 완료일을 관리하는 변수가 Null일 경우 완료처리 한다. 
