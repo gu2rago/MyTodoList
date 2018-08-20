@@ -33,3 +33,12 @@ Todo는 Have a 관계를 갖을 수 있다.
  - Todo의 유니크한 id를 파라미터로 받아서 Todo 내용을 완료처리 한다.
  - 파라미터로 받은 Todo id를 이용하여 자신이 달린 directory를 조회 후
  - TodoEntity의 완료일을 관리하는 변수가 Null일 경우 완료처리 한다. 
+
+# 개발환경
+ Java 8, Spring Boot 1.5.16.BUILD-SNAPSHOT,gradle, JPA
+
+# Build
+ Mac, Linux : ./gradlew clean build
+ 
+# Comment
+ Front는 구현하지 못하고 Advenced Rest Client 를 이용하였습니다. 
